@@ -9,14 +9,6 @@ class GridEdgeDetector:
         self.nbr_cols = grid.shape[1]
         self.check_type = check_type
 
-    def is_current_position_before_grid_edge(self, current_position: CurrentPosition) -> bool:
-        if self.check_type == "horizontal":
-            return current_position.col == self.nbr_cols - 2
-        elif self.check_type == "vertical":
-            return current_position.row == self.nbr_rows - 2
-        else:
-            self.__checker_value_error()
-
     def is_current_position_at_grid_edge(self, current_position: CurrentPosition) -> bool:
         if self.check_type == "horizontal":
             return current_position.col == self.nbr_cols - 1
