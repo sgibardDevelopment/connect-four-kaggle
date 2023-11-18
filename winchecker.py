@@ -16,7 +16,7 @@ class WinChecker:
         action = current_position.evaluate_action_according_to_current_position(self.grid, self.player_selected_position.access_player())
         win_counter = WinCounterCalculator(win_counter).apply_action(action)
 
-        if not GridEdgeDetector(self.grid, check_type).is_current_position_at_grid_edge(current_position):
+        if self.__current_position_not_at_grid_edge(current_position, check_type):
             current_position = self.__move_to_next_position(win_counter, current_position, check_type)
             win_counter = self.__check_next_position(win_counter, current_position, check_type)
         else:
@@ -24,6 +24,9 @@ class WinChecker:
             pass
 
         return win_counter
+
+    def __current_position_not_at_grid_edge(self, current_position, check_type):
+        return not GridEdgeDetector(self.grid, check_type).is_current_position_at_grid_edge(current_position)
 
     def __check_next_position(self, win_counter: int, current_position: CurrentPosition, check_type: str):
         if self._game_is_won(win_counter):
