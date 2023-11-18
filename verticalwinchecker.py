@@ -10,4 +10,4 @@ class VerticalWinChecker(WinChecker):
         self.player = win_checker.player_selected_position.player
 
     def calculate_vertical_win_counter(self) -> int:
-        return self._check_entire_lines(win_counter=0, current_position=self.current_position, check_type="vertical")
+        return self._check_entire_line(win_counter=0, current_position=self.current_position, check_type="vertical")
