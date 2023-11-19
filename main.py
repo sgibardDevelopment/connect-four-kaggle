@@ -17,24 +17,21 @@ class Agent:
 
 boardgrid = BoardGrid(rows=6, columns=7)
 
-boardgrid.fill_grid(col=0, player=1)
+boardgrid.fill_grid(col=6, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=0, player=1)
+boardgrid.fill_grid(col=6, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=0, player=1)
+boardgrid.fill_grid(col=6, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=0, player=1)
+boardgrid.fill_grid(col=6, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=0, player=1)
+boardgrid.fill_grid(col=6, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=0, player=1)
-print(boardgrid.grid)
-
-boardgrid.fill_grid(col=0, player=1)
+boardgrid.fill_grid(col=6, player=1)
 print(boardgrid.grid)
 
