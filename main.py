@@ -15,29 +15,26 @@ class Agent:
         self.boardgrid = boardgrid
         pass
 
-board = [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 2, 2,
-         0, 0, 0, 0, 2, 1, 2, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 2, 1, 2, 0, 2, 0]
-#print(len(board))
 boardgrid = BoardGrid(rows=6, columns=7)
 
-boardgrid.fill_grid(col=1, player=1)
+boardgrid.fill_grid(col=0, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=1, player=1)
+boardgrid.fill_grid(col=0, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=1, player=1)
+boardgrid.fill_grid(col=0, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=1, player=1)
+boardgrid.fill_grid(col=0, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=1, player=2)
+boardgrid.fill_grid(col=0, player=1)
 print(boardgrid.grid)
 
-boardgrid.fill_grid(col=1, player=2)
+boardgrid.fill_grid(col=0, player=1)
 print(boardgrid.grid)
 
-#print(list(env.agents))
-#env.run(['random', 'random'])
-#env.render(mode= "ipython")
+boardgrid.fill_grid(col=0, player=1)
+print(boardgrid.grid)
+

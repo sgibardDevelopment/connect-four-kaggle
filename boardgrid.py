@@ -1,8 +1,10 @@
 from kaggle_environments import make, evaluate
 from playerselectedposition import PlayerSelectedPosition
 from winchecker import WinChecker
-from horizontalwinchecker import  HorizontalWinChecker
+from horizontalwinchecker import HorizontalWinChecker
 from verticalwinchecker import VerticalWinChecker
+from gridedgedetector import GridEdgeDetector
+from currentposition import CurrentPosition
 import pandas as pd
 
 
@@ -40,11 +42,11 @@ class BoardGrid:
                 pass
 
     def __check_horizontal_win(self, horizontal_win_checker):
-        print('horizontal_win_checker =' + str(horizontal_win_checker))
+        #print('horizontal_win_checker =' + str(horizontal_win_checker))
         return horizontal_win_checker == self.inarow
 
     def __check_vertical_win(self, vertical_win_checker):
-        print('vertical_win_checker =' + str(vertical_win_checker))
+        #print('vertical_win_checker =' + str(vertical_win_checker))
         return vertical_win_checker == self.inarow
 
     @staticmethod
