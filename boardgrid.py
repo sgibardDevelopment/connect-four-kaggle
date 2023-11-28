@@ -1,10 +1,7 @@
-from kaggle_environments import make, evaluate
-from playerselectedposition import PlayerSelectedPosition
+from positions.playerselectedposition import PlayerSelectedPosition
 from winchecker import WinChecker
 from horizontalwinchecker import HorizontalWinChecker
 from verticalwinchecker import VerticalWinChecker
-from gridedgedetector import GridEdgeDetector
-from currentposition import CurrentPosition
 import pandas as pd
 
 

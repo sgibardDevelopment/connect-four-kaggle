@@ -1,5 +1,5 @@
 from winchecker import WinChecker
-from currentposition import CurrentPosition
+from positions.currentposition import CurrentPosition
 
 
 class HorizontalWinChecker(WinChecker):

@@ -1,4 +1,4 @@
-from currentposition import CurrentPosition
+from positions.currentposition import CurrentPosition
 
 
 class MoveCurrentPosition:

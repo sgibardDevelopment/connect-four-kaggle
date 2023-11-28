@@ -1,5 +1,5 @@
 import pandas as pd
-from playerselectedposition import PlayerSelectedPosition
+from positions.playerselectedposition import PlayerSelectedPosition
 from enumgridmap import EnumGridMap
 
 

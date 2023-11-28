@@ -1,7 +1,5 @@
 import pandas as pd
-from currentposition import CurrentPosition
-from playerselectedposition import PlayerSelectedPosition
-from enumgridmap import EnumGridMap
+from positions.currentposition import CurrentPosition
 
 
 class GridEdgeDetector:
