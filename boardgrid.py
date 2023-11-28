@@ -60,26 +60,3 @@ class BoardGrid:
     def __fill_column(self, row, col, player) -> PlayerSelectedPosition:
         self.grid.iloc[row][col] = player
         return PlayerSelectedPosition(row, col, player)
-
-    @staticmethod
-    def __create_empty_grid(rows, columns) -> pd.DataFrame:
-        return pd.DataFrame(index=range(rows), columns=range(columns))
-
-    @staticmethod
-    def __init_grid(rows, columns) -> pd.DataFrame:
-        return pd.DataFrame(data=0, index=range(rows), columns=range(columns))
-
-    def __build_grid(self, rows, columns) -> pd.DataFrame:
-        self.__check_grid(rows, columns)
-        return self.__init_grid(rows, columns)
-
-    def __check_grid(self, rows, columns):
-        if self.__grid_size_is_too_small(rows, columns):
-            self.grid = self.__create_empty_grid(rows, columns)
-            raise (ValueError("Error : grid size is too small"))
-        else:
-            pass
-
-    @staticmethod
-    def __grid_size_is_too_small(rows, columns) -> bool:
-        return rows < 2 or columns < 2
