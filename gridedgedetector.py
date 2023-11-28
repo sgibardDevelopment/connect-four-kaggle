@@ -1,6 +1,7 @@
 import pandas as pd
 from currentposition import CurrentPosition
 from playerselectedposition import PlayerSelectedPosition
+from enumgridmap import EnumGridMap
 
 
 class GridEdgeDetector:
@@ -23,25 +24,25 @@ class GridEdgeDetector:
     def __is_current_position_on_a_border(self, current_position: CurrentPosition) -> bool:
         return current_position.row == 0 or current_position.col == 0 or current_position.row == self.nbr_rows - 1 or current_position.col == self.nbr_cols - 1
 
-    def __map_selected_position_type_of_place(self, player_selected_position: PlayerSelectedPosition) -> str:
+    def map_selected_position_type_of_place(self, player_selected_position: PlayerSelectedPosition) -> int:
         if player_selected_position.row == 0 and player_selected_position.col == 0:
-            return "high_left_corner"
+            return EnumGridMap().high_left_corner
         elif player_selected_position.row == 0 and player_selected_position.col == self.nbr_cols - 1:
-            return "high_right_corner"
+            return EnumGridMap().high_right_corner
         elif player_selected_position.row == self.nbr_rows - 1 and player_selected_position.col == 0:
-            return "low_left_corner"
+            return EnumGridMap().low_left_corner
         elif player_selected_position.row == self.nbr_rows - 1 and player_selected_position.col == self.nbr_cols - 1:
-            return "low_right_corner"
+            return EnumGridMap().low_right_corner
         elif player_selected_position.row == 0:
-            return "highest_row"
+            return EnumGridMap().highest_row
         elif player_selected_position.row == self.nbr_rows - 1:
-            return "lowest_row"
+            return EnumGridMap().lowest_row
         elif player_selected_position.col == 0:
-            return "far_left_column"
+            return EnumGridMap().far_left_column
         elif player_selected_position.col == self.nbr_cols - 1:
-            return "far_right_column"
+            return EnumGridMap().far_right_column
         else:
-            return "not_a_border"
+            return EnumGridMap().not_a_border
 
     @staticmethod
     def __checker_value_error():
