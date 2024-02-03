@@ -1,11 +1,11 @@
 import pandas as pd
+from position import Position
 
 
-class PlayerSelectedPosition:
+class PlayerSelectedPosition(Position):
 
     def __init__(self, row, col, player):
-        self.row = row
-        self.col = col
+        super().__init__(row, col)
         self.player = player
 
     def access_player(self) -> int:
